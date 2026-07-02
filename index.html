@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UEJU Vintage</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#fff0f5; /* نفس لون الخلفية */
+color:#333;
+}
+
+header{
+background:white;
+padding:15px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#ff4da6; /* نفس الوردي */
+border-bottom:2px solid #ffd6e7;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:42px;
+color:#ff4da6;
+}
+
+.hero p{
+color:#666;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+background:#ff4da6; /* نفس الوردي */
+color:white;
+font-size:16px;
+transition: transform 0.2s;
+}
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:20px;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+
+/* ==== كود كارت المنتوج الجديد ==== */
+.products{
+display:flex;
+justify-content:center;
+padding:40px 20px;
+}
+.card{
+background:white;
+border-radius:20px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+max-width:320px;
+overflow:hidden;
+position:relative; /* مهم باش الثمن يجي فوق الصورة */
+border: 1px solid #ffd6e7;
+}
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+.price-tag{
+position:absolute;
+top:15px;
+right:15px;
+background:#ff4da6; /* نفس الوردي */
+color:white;
+padding:8px 16px;
+border-radius:30px;
+font-weight:bold;
+font-size:18px;
+box-shadow: 0 2px 8px rgba(255,77,166,0.4);
+}
+.card-body{
+padding:15px;
+text-align:center;
+}
+.card-body h3{
+margin:0;
+color:#ff4da6;
+font-size:20px;
+}
+.card-body p{
+margin:5px 0 0;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>UEJU Vintage 💖</header>
+
+<div class="hero">
+<h1>Bienvenue chez UEJU Vintage</h1>
+<p>L'élégance qui vous ressemble ✨</p>
+<button class="btn">Découvrir la collection</button>
+<button class="btn">اكتشفوا المجموعة</button>
+</div>
+
+<!-- ==== بلاصة المنتوج بالصورة والثمن ==== -->
+<section class="products">
+  <div class="card">
+    <img src="robe.jpg" alt="Robe Vintage UEJU"> <!-- بدلي سميت التصويرة هنا -->
+    <div class="price-tag">249DH</div>
+    <div class="card-body">
+      <h3>Robe Vintage</h3>
+      <p>توصيل لجميع مدن المغرب</p>
+    </div>
+  </div>
+</section>
+
+<section>
+<h2>✨ Boutique bientôt disponible</h2>
+<p>Nous préparons une collection spéciale pour vous.</p>
+</section>
+
+<footer>
+© 2026 UEJU Vintage - Tous droits réservés
+</footer>
+
+</body>
+</html>
