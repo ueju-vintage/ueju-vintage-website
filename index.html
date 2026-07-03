@@ -9,54 +9,82 @@
 body{
 margin:0;
 font-family:Arial;
-background:#fff5f8;
+background:#fff0f5;
 color:#333;
 }
 
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
+/* HEADER */
+header{
 background:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.logo{
-font-size:26px;
+padding:15px;
+text-align:center;
+font-size:28px;
 font-weight:bold;
-color:#ff4f9a;
+color:#ff4da6;
+border-bottom:2px solid #ffd6e7;
 }
 
 /* HERO */
 .hero{
 text-align:center;
 padding:50px 20px;
+background:linear-gradient(white,#fff0f5);
 }
 
 .hero h1{
-color:#ff4f9a;
-font-size:40px;
+font-size:42px;
+color:#ff4da6;
+margin-bottom:10px;
 }
 
 .hero p{
 color:#666;
+font-size:18px;
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.pink{
+background:#ff4da6;
+color:white;
+}
+
+.white{
+background:white;
+border:2px solid #ff4da6;
+color:#ff4da6;
 }
 
 /* PRODUCTS */
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:20px;
-padding:20px 8%;
+padding:20px;
 }
 
 .card{
 background:white;
+width:220px;
 border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+padding:10px;
+box-shadow:0 0 15px #ffd6e7;
+text-align:center;
 transition:0.3s;
 }
 
@@ -66,92 +94,146 @@ transform:translateY(-5px);
 
 .card img{
 width:100%;
-height:320px;
+border-radius:10px;
+height:250px;
 object-fit:cover;
 }
 
-.card-body{
-padding:15px;
-text-align:center;
-}
-
 .price{
-color:#ff4f9a;
-font-size:20px;
+color:#ff4da6;
 font-weight:bold;
 }
 
-.size{
-font-size:14px;
-color:#777;
-margin:5px 0;
+/* CART */
+.cart{
+position:fixed;
+right:10px;
+top:80px;
+width:260px;
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 15px #ffb6d9;
 }
 
-.btn{
-background:#ff4f9a;
-color:white;
-padding:10px 15px;
-border:none;
-border-radius:25px;
-cursor:pointer;
+.cart h3{
+margin-top:0;
+color:#ff4da6;
+}
+
+.item{
+font-size:13px;
+margin-bottom:5px;
+}
+
+.total{
+font-weight:bold;
 margin-top:10px;
 }
 
-.btn:hover{
-transform:scale(1.05);
+button{
+background:#ff4da6;
+color:white;
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+width:100%;
+margin-top:5px;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-color:#777;
-margin-top:30px;
+color:#888;
+margin-top:40px;
 }
 </style>
-
 </head>
 
 <body>
 
-<nav>
-<div class="logo">UEJU Vintage 💖</div>
-</nav>
+<header>UEJU Vintage 💖</header>
 
 <div class="hero">
-<h1>L'élégance qui vous ressemble ✨</h1>
-<p>Collection vintage exclusive au Maroc</p>
+<h1>Bienvenue chez UEJU Vintage</h1>
+<p>L'élégance qui vous ressemble ✨ | الأناقة التي تشبهك</p>
+
+<button class="btn pink">Découvrir la collection</button>
+<button class="btn white">اكتشفوا المجموعة</button>
 </div>
 
-<!-- PRODUCTS -->
 <div class="products">
 
-<!-- ROBE BLEUE -->
 <div class="card">
-<img src="images/robe-bleue.jpg">
-<div class="card-body">
-<h3>Robe Bleue Vintage</h3>
-<p class="price">299 DH</p>
-<p class="size">S - M - L - XL</p>
-<button class="btn">Ajouter au panier</button>
-</div>
+<img src="https://images.unsplash.com/photo-1520975922284-9a4f6c1b3b1b">
+<h3>Robe Rose</h3>
+<p class="price">250 DH</p>
+<button onclick="add('Robe Rose',250)">Ajouter au panier</button>
 </div>
 
-<!-- ROBE ROSE -->
 <div class="card">
-<img src="images/robe-rose.jpg">
-<div class="card-body">
-<h3>Robe Fleurie Rose</h3>
-<p class="price">249 DH</p>
-<p class="size">S - M - L - XL</p>
-<button class="btn">Ajouter au panier</button>
-</div>
+<img src="https://images.unsplash.com/photo-1520975682031">
+<h3>Robe Élégante</h3>
+<p class="price">300 DH</p>
+<button onclick="add('Robe Élégante',300)">Ajouter au panier</button>
 </div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-152097566">
+<h3>Style Vintage</h3>
+<p class="price">280 DH</p>
+<button onclick="add('Style Vintage',280)">Ajouter au panier</button>
+</div>
+
+</div>
+
+<div class="cart">
+<h3>🛍️ Panier</h3>
+<div id="items"></div>
+<div class="total">Total: <span id="total">0</span> DH</div>
+<button onclick="order()">Commander WhatsApp</button>
 </div>
 
 <footer>
-© 2026 UEJU Vintage - Tous droits réservés 💖
+© 2026 UEJU Vintage - Tous droits réservés
 </footer>
+
+<script>
+let cart=[];
+
+function add(name,price){
+cart.push({name,price});
+render();
+}
+
+function render(){
+let box=document.getElementById("items");
+let total=0;
+box.innerHTML="";
+
+cart.forEach(i=>{
+total+=i.price;
+box.innerHTML+=`<div class='item'>${i.name} - ${i.price} DH</div>`;
+});
+
+document.getElementById("total").innerText=total;
+}
+
+function order(){
+let phone="212600000000"; // بدلي رقمك
+let msg="Bonjour, je veux commander:%0A";
+
+cart.forEach(i=>{
+msg+="- "+i.name+" ("+i.price+" DH)%0A";
+});
+
+msg+="Total: "+document.getElementById("total").innerText+" DH";
+
+window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
