@@ -9,140 +9,148 @@
 body{
 margin:0;
 font-family:Arial;
-background:#fff0f5; /* نفس لون الخلفية */
+background:#fff5f8;
 color:#333;
 }
 
-header{
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
 background:white;
-padding:15px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-color:#ff4da6; /* نفس الوردي */
-border-bottom:2px solid #ffd6e7;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
+.logo{
+font-size:26px;
+font-weight:bold;
+color:#ff4f9a;
+}
+
+/* HERO */
 .hero{
 text-align:center;
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .hero h1{
-font-size:42px;
-color:#ff4da6;
+color:#ff4f9a;
+font-size:40px;
 }
 
 .hero p{
 color:#666;
-font-size:18px;
+}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px 8%;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+text-align:center;
+}
+
+.price{
+color:#ff4f9a;
+font-size:20px;
+font-weight:bold;
+}
+
+.size{
+font-size:14px;
+color:#777;
+margin:5px 0;
 }
 
 .btn{
-display:inline-block;
-margin:10px;
-padding:12px 20px;
-border-radius:30px;
-border:none;
-cursor:pointer;
-background:#ff4da6; /* نفس الوردي */
+background:#ff4f9a;
 color:white;
-font-size:16px;
-transition: transform 0.2s;
-}
-.btn:hover{
-transform:scale(1.05);
+padding:10px 15px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin-top:10px;
 }
 
-section{
-padding:20px;
-text-align:center;
+.btn:hover{
+transform:scale(1.05);
 }
 
 footer{
 text-align:center;
 padding:20px;
-color:#888;
-}
-
-/* ==== كود كارت المنتوج الجديد ==== */
-.products{
-display:flex;
-justify-content:center;
-padding:40px 20px;
-}
-.card{
-background:white;
-border-radius:20px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-max-width:320px;
-overflow:hidden;
-position:relative; /* مهم باش الثمن يجي فوق الصورة */
-border: 1px solid #ffd6e7;
-}
-.card img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-.price-tag{
-position:absolute;
-top:15px;
-right:15px;
-background:#ff4da6; /* نفس الوردي */
-color:white;
-padding:8px 16px;
-border-radius:30px;
-font-weight:bold;
-font-size:18px;
-box-shadow: 0 2px 8px rgba(255,77,166,0.4);
-}
-.card-body{
-padding:15px;
-text-align:center;
-}
-.card-body h3{
-margin:0;
-color:#ff4da6;
-font-size:20px;
-}
-.card-body p{
-margin:5px 0 0;
-color:#666;
+color:#777;
+margin-top:30px;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>UEJU Vintage 💖</header>
+<nav>
+<div class="logo">UEJU Vintage 💖</div>
+</nav>
 
 <div class="hero">
-<h1>Bienvenue chez UEJU Vintage</h1>
-<p>L'élégance qui vous ressemble ✨</p>
-<button class="btn">Découvrir la collection</button>
-<button class="btn">اكتشفوا المجموعة</button>
+<h1>L'élégance qui vous ressemble ✨</h1>
+<p>Collection vintage exclusive au Maroc</p>
 </div>
 
-<!-- ==== بلاصة المنتوج بالصورة والثمن ==== -->
-<section class="products">
-  <div class="card">
-    <img src="robe.jpg" alt="Robe Vintage UEJU"> <!-- بدلي سميت التصويرة هنا -->
-    <div class="price-tag">249DH</div>
-    <div class="card-body">
-      <h3>Robe Vintage</h3>
-      <p>توصيل لجميع مدن المغرب</p>
-    </div>
-  </div>
-</section>
+<!-- PRODUCTS -->
+<div class="products">
 
-<section>
-<h2>✨ Boutique bientôt disponible</h2>
-<p>Nous préparons une collection spéciale pour vous.</p>
-</section>
+<!-- ROBE BLEUE -->
+<div class="card">
+<img src="images/robe-bleue.jpg">
+<div class="card-body">
+<h3>Robe Bleue Vintage</h3>
+<p class="price">299 DH</p>
+<p class="size">S - M - L - XL</p>
+<button class="btn">Ajouter au panier</button>
+</div>
+</div>
+
+<!-- ROBE ROSE -->
+<div class="card">
+<img src="images/robe-rose.jpg">
+<div class="card-body">
+<h3>Robe Fleurie Rose</h3>
+<p class="price">249 DH</p>
+<p class="size">S - M - L - XL</p>
+<button class="btn">Ajouter au panier</button>
+</div>
+</div>
+
+</div>
 
 <footer>
-© 2026 UEJU Vintage - Tous droits réservés
+© 2026 UEJU Vintage - Tous droits réservés 💖
 </footer>
 
 </body>
